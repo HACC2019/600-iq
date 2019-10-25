@@ -1,3 +1,4 @@
 
 
-For details, please see http://ics-software-engineering.github.io/meteor-application-template-react/
+This is project for HACC 2019 created by team 600-iq
+
