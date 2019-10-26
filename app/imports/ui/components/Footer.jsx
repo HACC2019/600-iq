@@ -1,4 +1,5 @@
 import React from 'react';
+import { Grid, Header, Icon, Image } from 'semantic-ui-react';
 
 /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
 class Footer extends React.Component {
@@ -6,13 +7,23 @@ class Footer extends React.Component {
     const divStyle = { paddingTop: '15px' };
     return (
         <footer>
-          <div style={divStyle} className="ui center aligned container">
-            <hr />
-              CONNECT WITH US<br />
-              University of Hawaii<br />
-              Honolulu, HI 96822 <br />
-            <a href="http://ics-software-engineering.github.io/meteor-application-template-react">Template Home Page</a>
-          </div>
+          <Grid centered style={divStyle}>
+            <Grid.Row>
+              <Header as='h1'>CONNECT WITH US</Header>
+            </Grid.Row>
+            <Grid.Row>
+              <a href='https://www.facebook.com/hawaiigreengrowth'><Icon size='large' name='facebook f'/></a>
+              {/* <a href='https://plus.google.com/u/0/104386650726765100093/posts'> */}
+              {/*  <Icon size='large' className='custom_google_plus'/> */}
+              {/* </a> */}
+              <a href='https://www.instagram.com/hawaiigreengrowth/'>
+                <Icon size='large' name='instagram' />
+              </a>
+              <a href='https://twitter.com/HIGreenGrowth'>
+                  <Icon size='large' name='twitter'/>
+              </a>
+            </Grid.Row>
+          </Grid>
         </footer>
     );
   }

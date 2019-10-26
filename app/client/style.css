@@ -1,3 +1,11 @@
 .topmenu {
   background-image: url(https://www.hawaiigreengrowth.org/wp-content/uploads/2018/08/hgg-aug-headerbg-gradient.jpg) !important;
 }
+
+.custom_google_plus{
+  content: url("https://www.iconsdb.com/icons/preview/black/google-plus-xxl.png");
+}
+
+a i {
+  color: Black;
+}
