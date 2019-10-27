@@ -5,19 +5,40 @@ import { Grid, Image } from 'semantic-ui-react';
 class Landing extends React.Component {
   render() {
     return (
-        <Grid verticalAlign='middle' textAlign='center' container>
+        <div>
+          <div className= 'beauty heights'>
+          <Grid verticalAlign='center' textAlign='center' container>
+            <Grid.Column className='landing-welcome' >
+              <h1>Welcome the Hawaii Green Growth!</h1>
+              <h2> Saving Hawaii one community at a time</h2>
+            </Grid.Column>
 
-          <Grid.Column width={4}>
-            <Image size='small' circular src="/images/meteor-logo.png"/>
-          </Grid.Column>
-
-          <Grid.Column width={8}>
-            <h1>Welcome to this template</h1>
-            <p>Now get to work and modify this app!</p>
-          </Grid.Column>
-
-        </Grid>
-    );
+          </Grid>
+          </div>
+          <div className='community-background'>
+            <h1 id = 'action' Align='center'> See the Communities in Action!</h1>
+            <Grid columns={3} divided>
+              <Grid.Row className = 'community'>
+                <Grid.Column id ='rows' >
+                  <h2>Some dudes planting trees</h2>
+                  <Image
+                      size ='large' src='https://www.churchofjesuschrist.org/bc/content/ldsorg/church/news/2015/06/19/JustServe%20580.jpg'/>
+                </Grid.Column  >
+                <Grid.Column id ='rows' className = 'community'>
+                  <h2>Save the turtles!</h2>
+                  <Image
+                      size ='large' src='https://www.westcoastconnection.com/content/uploads/2015/07/unnamed-1024x768.jpg'/>
+                </Grid.Column>
+                <Grid.Column id ='rows' className = 'community'>
+                  <h2>Beach Cleanups</h2>
+                  <Image
+                       size ='large' src='https://trashhero.org/wp-content/uploads/2017/08/Photo-21.05.15-13-24-30-e1442143042301.png'/>
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+          </div>
+        </div>
+  );
   }
 }
 

@@ -21,8 +21,9 @@ class App extends React.Component {
   render() {
     return (
         <Router>
-          <div>
+          <div >
             <NavBar/>
+            <div>
             <Switch>
               <Route exact path="/" component={Landing}/>
               <Route path="/signin" component={Signin}/>
@@ -35,6 +36,7 @@ class App extends React.Component {
               <Route component={NotFound}/>
             </Switch>
             <Footer/>
+            </div>
           </div>
         </Router>
     );
