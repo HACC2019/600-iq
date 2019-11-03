@@ -6,13 +6,16 @@
   background-image: url(https://res.cloudinary.com/thetripguru/image/upload/fl_lossy.progressive,e_improve/q_auto:low,c_scale,f_auto,dpr_auto,c_fill,g_center,w_1798/vcyzdzhhrnucq50rucb4) ;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.heights{
-
   height: 600px;
 }
 
+.beauty h1.ui.inverted.header{
+  font-size: 60px;
+}
+
+.beauty h2.ui.inverted.header{
+  font-size: 35px;
+}
 .community{
   margin: 15px;
   background-color: bisque;
