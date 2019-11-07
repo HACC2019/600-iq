@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Sans&display=swap');
 
+.topmenu {
+  background-image: url(https://www.hawaiigreengrowth.org/wp-content/uploads/2018/08/hgg-aug-headerbg-gradient.jpg) !important;
+}
+
 .beauty{
   background-image: url('images/hawaii-background.jpg') ;
   background-repeat: no-repeat;
