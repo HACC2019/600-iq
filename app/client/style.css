@@ -1,13 +1,39 @@
-.topmenu {
-  background-image: url(https://www.hawaiigreengrowth.org/wp-content/uploads/2018/08/hgg-aug-headerbg-gradient.jpg) !important;
-}
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Sans&display=swap');
 
 .beauty{
-  background-image: url(https://res.cloudinary.com/thetripguru/image/upload/fl_lossy.progressive,e_improve/q_auto:low,c_scale,f_auto,dpr_auto,c_fill,g_center,w_1798/vcyzdzhhrnucq50rucb4) ;
+  background-image: url('images/hawaii-background.jpg') ;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.landing-2{
+  background-image: url('images/clouds.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.green-background {
+  background-color: #5DAA68;
+  color: whitesmoke;
+  height: 200px;
+}
+.black-background {
+  background-color: black;
+  color: white;
+  color: whitesmoke;
+  height: 200px;
+}
+.amatic {
+  font-family: 'Amatic SC' !important;
+  font-size: 28px;
+}
+.josefin {
+  font-family: 'Josefin Sans' !important;
+}
+h1 {
+  font-family: 'Amatic SC' !important;
+}
+p {
+  font-family: 'Josefin Sans' !important;
+}
 .heights{
 
   height: 600px;
