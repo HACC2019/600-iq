@@ -9,6 +9,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.blue {
+  color: #52C4D3 !important;
+}
 .landing-2{
   background-image: url('images/clouds.jpg');
   background-repeat: no-repeat;
@@ -37,6 +40,7 @@ h1 {
 }
 p {
   font-family: 'Josefin Sans' !important;
+  font-size:20px;
 }
 .heights{
 
