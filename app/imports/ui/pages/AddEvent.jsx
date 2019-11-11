@@ -1,9 +1,9 @@
 import React from 'react';
-import { Stuffs } from '/imports/api/stuff/Stuff';
+import { Events } from '/imports/api/event/Event';
 import { Grid, Segment, Header } from 'semantic-ui-react';
 import AutoForm from 'uniforms-semantic/AutoForm';
 import TextField from 'uniforms-semantic/TextField';
-import NumField from 'uniforms-semantic/NumField';
+import LongTextField from 'uniforms-semantic/LongTextField';
 import SelectField from 'uniforms-semantic/SelectField';
 import SubmitField from 'uniforms-semantic/SubmitField';
 import ErrorsField from 'uniforms-semantic/ErrorsField';
@@ -24,7 +24,7 @@ const formSchema = new SimpleSchema({
     allowedValues: ['Individual', 'Community'],
     defaultValue: 'Community',
   },
-  eventDate: { label: 'Date of Event', type: Date, defaultValue: new Date() },
+  eventDate: { label: 'Date of Event', type: Date },
   eventDescription: { label: 'Description of the Event', type: String },
   eventLocation: { label: 'Location of event', type: String },
   eventTag: {
@@ -41,7 +41,7 @@ class AddEvent extends React.Component {
   submit(data, formRef) {
     const { name, affiliation, eventDate, eventDescription, eventLocation, eventTag } = data;
     const owner = Meteor.user().username;
-    Stuffs.insert({ name, affiliation, eventDate, eventDescription, eventLocation, eventTag, owner },
+    Events.insert({ name, affiliation, eventDate, eventDescription, eventLocation, eventTag, owner },
         (error) => {
           if (error) {
             swal('Error', error.message, 'error');
@@ -64,10 +64,10 @@ class AddEvent extends React.Component {
             }} schema={formSchema} onSubmit={data => this.submit(data, fRef)}>
               <Segment>
                 <TextField name='name'/>
-                <TextField name='affiliation'/>
+                <SelectField name='affiliation'/>
                 <TextField name='eventDate'/>
-                <TextField name='eventDescription'/>
                 <TextField name='eventLocation'/>
+                <LongTextField name='eventDescription'/>
                 <TextField name='eventTag'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
