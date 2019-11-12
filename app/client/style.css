@@ -1,3 +1,68 @@
-.topmenu {
-  background-image: url(https://www.hawaiigreengrowth.org/wp-content/uploads/2018/08/hgg-aug-headerbg-gradient.jpg) !important;
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Sans&display=swap');
+
+.beauty{
+  background-image: url('images/hawaii-background.jpg') ;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.landing-2{
+  background-image: url('images/clouds.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.green-background {
+  background-color: #5DAA68;
+  color: whitesmoke;
+  height: 200px;
+}
+.black-background {
+  background-color: black;
+  color: white;
+  color: whitesmoke;
+  height: 200px;
+}
+.amatic {
+  font-family: 'Amatic SC' !important;
+  font-size: 28px;
+}
+.josefin {
+  font-family: 'Josefin Sans' !important;
+}
+h1 {
+  font-family: 'Amatic SC' !important;
+}
+p {
+  font-family: 'Josefin Sans' !important;
+}
+.heights{
+
+  height: 600px;
+}
+
+.community{
+  margin: 15px;
+  background-color: bisque;
+}
+
+.community-background{
+  border-image-source: url(https://image.shutterstock.com/image-vector/seamless-pattern-vertical-rows-leaves-600w-600481139.jpg);
+  border-image-slice: 20;
+  background-color: bisque;
+}
+
+.landing-welcome{
+  margin-top: 20%;
+  color: ivory;
+}
+
+#action{
+  padding-top: 10px;
+}
+
+#rows{
+  width: 30%;
+}
+
+.nav-pad{
+  padding-top: 4px;
 }

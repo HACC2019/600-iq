@@ -5,19 +5,26 @@ import { Grid, Image } from 'semantic-ui-react';
 class Landing extends React.Component {
   render() {
     return (
-        <Grid verticalAlign='middle' textAlign='center' container>
-
-          <Grid.Column width={4}>
-            <Image size='small' circular src="/images/meteor-logo.png"/>
-          </Grid.Column>
-
-          <Grid.Column width={8}>
-            <h1>Welcome to this template</h1>
-            <p>Now get to work and modify this app!</p>
-          </Grid.Column>
-
-        </Grid>
-    );
+        <div>
+          <div className= 'beauty heights'>
+          <Grid columns={2} textAlign='center' container>
+            <Grid.Column>
+              <Image src='/images/alohapluswheel-main.png'/>
+            </Grid.Column>
+            <Grid.Column className='landing-welcome'>
+              <h1>Welcome to Hawaii Green Growth!</h1>
+              <p>Saving Hawaii one community at a time.
+                This is your social media platform to share your
+                contributions to our conservation goals with the community. </p>
+            </Grid.Column>
+          </Grid>
+          </div>
+          <div className='green-background'>
+            <h1 id = 'action' Align='center'>How to Use This Platform</h1>
+            <p>To be completed after events page is completed</p>
+          </div>
+        </div>
+  );
   }
 }
 
