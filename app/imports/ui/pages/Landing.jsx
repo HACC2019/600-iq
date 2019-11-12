@@ -9,7 +9,7 @@ class Landing extends React.Component {
           <div className= 'beauty heights'>
           <Grid columns={2} textAlign='center' container>
             <Grid.Column>
-              <Image src='/images/alohapluswheel-main.png'/>
+              <Image src='/images/alohapluswheel-main-color.png'/>
             </Grid.Column>
             <Grid.Column className='landing-welcome'>
               <h1>Welcome to Hawaii Green Growth!</h1>
