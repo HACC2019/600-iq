@@ -9,7 +9,7 @@ import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
 import ListStuff from '../pages/ListStuff';
 import ListStuffAdmin from '../pages/ListStuffAdmin';
-import AddStuff from '../pages/AddStuff';
+import AddEvent from '../pages/AddEvent';
 import EditStuff from '../pages/EditStuff';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
@@ -34,7 +34,7 @@ class App extends React.Component {
               <Route path="/show-event" component={ListEvent}/>
               <Route path="/event" component={Event}/>
               <ProtectedRoute path="/challenge" component={ListStuff}/>
-              <ProtectedRoute path="/addScores" component={AddStuff}/>
+              <ProtectedRoute path="/addEvent" component={AddEvent}/>
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
               <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
               <ProtectedRoute path="/signout" component={Signout}/>
