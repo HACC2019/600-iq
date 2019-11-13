@@ -10,5 +10,16 @@
     { "name": "Bicycle", "quantity": 2, "owner": "john@foo.com", "condition": "poor" },
     { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
+  ],
+
+  "defaultEvents": [
+    {
+      "name": "Sample Event",
+      "participant": "Participants go here",
+      "date": "11-11-2019",
+      "image": "images/hawaii-background.jpg",
+      "description": "This is an example of how you can show events through cards"
+    }
   ]
+
 }
