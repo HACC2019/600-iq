@@ -17,7 +17,7 @@ const goals = ['Clean Energy', 'Local Food', 'Natural Resource Management', 'Was
 
 /** Create a schema to specify the structure of the data to appear in the form. */
 const formSchema = new SimpleSchema({
-  name: { label: 'Name', type: String },
+  name: { label: 'Event Name', type: String },
   affiliation: {
     label: 'Affiliation',
     type: String,
