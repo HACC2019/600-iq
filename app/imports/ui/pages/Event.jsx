@@ -6,8 +6,7 @@ import SubmitField from 'uniforms-semantic/SubmitField';
 import ErrorsField from 'uniforms-semantic/ErrorsField';
 import swal from 'sweetalert';
 import 'uniforms-bridge-simple-schema-2'; // required for Uniforms
-import { Events } from '/imports/api/event/Events';
-import { EventsSchema } from '../../api/event/Events';
+import { Events } from '/imports/api/event/Event';
 
 /** Create a schema to specify the structure of the data to appear in the form. */
 

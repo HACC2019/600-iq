@@ -31,6 +31,7 @@ const formSchema = new SimpleSchema({
     label: 'Challenge Tags',
     type: String,
     allowedValues: goals,
+    defaultValue: goals[0],
   },
 });
 
@@ -68,7 +69,7 @@ class AddEvent extends React.Component {
                 <TextField name='eventDate'/>
                 <TextField name='eventLocation'/>
                 <LongTextField name='eventDescription'/>
-                <TextField name='eventTag'/>
+                <SelectField name='eventTag'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
               </Segment>
