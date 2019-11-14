@@ -21,7 +21,6 @@ class Event extends React.Component {
             </Card.Description>
           </Card.Content>
         </Card>
-
     );
   }
 }

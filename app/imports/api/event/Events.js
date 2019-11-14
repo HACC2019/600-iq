@@ -12,6 +12,7 @@ const EventsSchema = new SimpleSchema({
   date: Date,
   image: String,
   description: String,
+  owner: String,
 }, { tracker: Tracker });
 
 /** Attach this schema to the collection. */
