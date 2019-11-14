@@ -4,7 +4,7 @@ import { Container, Header, Loader, Card } from 'semantic-ui-react';
 import Event from '/imports/ui/components/Event';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
-import { Events } from '/imports/api/event/Events';
+import { Events } from '/imports/api/event/Event';
 
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */

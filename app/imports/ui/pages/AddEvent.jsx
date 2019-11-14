@@ -17,7 +17,7 @@ const goals = ['Clean Energy', 'Local Food', 'Natural Resource Management', 'Was
 
 /** Create a schema to specify the structure of the data to appear in the form. */
 const formSchema = new SimpleSchema({
-  name: { label: 'Name', type: String },
+  name: { label: 'Event Name', type: String },
   affiliation: {
     label: 'Affiliation',
     type: String,
@@ -31,6 +31,7 @@ const formSchema = new SimpleSchema({
     label: 'Challenge Tags',
     type: String,
     allowedValues: goals,
+    defaultValue: goals[0],
   },
 });
 
@@ -68,7 +69,7 @@ class AddEvent extends React.Component {
                 <TextField name='eventDate'/>
                 <TextField name='eventLocation'/>
                 <LongTextField name='eventDescription'/>
-                <TextField name='eventTag'/>
+                <SelectField name='eventTag'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
               </Segment>

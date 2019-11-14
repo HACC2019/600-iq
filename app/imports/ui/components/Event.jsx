@@ -1,24 +1,29 @@
 import React from 'react';
-import { Card, Image } from 'semantic-ui-react';
+import { Card, Label } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
+
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
+
 class Event extends React.Component {
   render() {
     return (
         <Card>
-          <Image src= {this.props.event.image} />
           <Card.Content>
             <Card.Header>{this.props.event.name} </Card.Header>
             <Card.Meta>
-              <span className='date'>{this.props.event.participant}</span>
+              Date: {this.props.event.eventDate}
             </Card.Meta>
-            <Card.Description>
-              {this.props.event.description}
-            </Card.Description>
-            <Card.Description>
-              {this.props.event.date}
-            </Card.Description>
+            <Card.Meta>
+              Location: {this.props.event.eventLocation}
+            </Card.Meta>
+          </Card.Content>
+          <Card.Content><Card.Description>
+            Event Detail: {'\n'}
+            {this.props.event.eventDescription}
+          </Card.Description></Card.Content>
+          <Card.Content>
+            Tags: <Label color='teal'>{this.props.event.eventTag}</Label>
           </Card.Content>
         </Card>
     );
