@@ -1,12 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, Redirect } from 'react-router-dom';
-import { Container, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
+import { Container, Form, Grid, Header, Message, Segment, Select } from 'semantic-ui-react';
 import { Accounts } from 'meteor/accounts-base';
 
 /**
  * Signup component is similar to signin component, but we create a new user instead.
  */
+const options = [
+  { key: 'c', text: 'Community', value: 'Community' },
+  { key: 'i', text: 'Individual', value: 'Individual' },
+];
 class Signup extends React.Component {
   /** Initialize state fields. */
   constructor(props) {
@@ -62,11 +66,11 @@ class Signup extends React.Component {
                     placeholder="Last Name"
                     onChange={this.handleChange}
                 />
-                <Form.Input
-                    label="Affiliation"
-                    name="affiliation"
-                    type="affiliation"
-                    placeholder="Affiliation"
+                <Form.Field
+                    control={Select}
+                    label='Affiliation'
+                    options={options}
+                    placeholder='Affiliation'
                     onChange={this.handleChange}
                 />
                 <Form.Input

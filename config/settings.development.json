@@ -1,8 +1,8 @@
 {
   "defaultAccounts": [
-    { "firstName": "Admin", "lastName":  "Admin", "affiliation":  "UH","email": "admin@foo.com", "password": "changeme", "role": "admin" },
-    { "firstName": "John", "lastName":  "Foo", "affiliation":  "Test","email": "john@foo.com", "password": "changeme" },
-    { "firstName": "IQ", "lastName":  "IQ", "affiliation":  "UH","email":  "600iq@gmail.com", "password": "0iq", "role":  "admin"}
+    { "firstName": "Admin", "lastName":  "Admin", "Community":  "UH","email": "admin@foo.com", "password": "changeme", "role": "admin" },
+    { "firstName": "John", "lastName":  "Foo", "Individual":  "Test","email": "john@foo.com", "password": "changeme" },
+    { "firstName": "IQ", "lastName":  "IQ", "Individual":  "UH","email":  "600iq@gmail.com", "password": "0iq", "role":  "admin"}
   ],
 
   "defaultData": [
