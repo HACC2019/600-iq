@@ -1,8 +1,8 @@
 {
   "defaultAccounts": [
-    { "email": "admin@foo.com", "password": "changeme", "role": "admin" },
-    { "email": "john@foo.com", "password": "changeme" },
-    { "email":  "600iq@gmail.com", "password": "0iq", "role":  "admin"}
+    { "firstName": "Admin", "lastName":  "Admin", "affiliation":  "UH","email": "admin@foo.com", "password": "changeme", "role": "admin" },
+    { "firstName": "John", "lastName":  "Foo", "affiliation":  "Test","email": "john@foo.com", "password": "changeme" },
+    { "firstName": "IQ", "lastName":  "IQ", "affiliation":  "UH","email":  "600iq@gmail.com", "password": "0iq", "role":  "admin"}
   ],
 
   "defaultData": [
@@ -15,10 +15,12 @@
   "defaultEvents": [
     {
       "name": "Sample Event",
-      "participant": "Participants go here",
-      "date": "11-11-2019",
-      "image": "images/hawaii-background.jpg",
-      "description": "This is an example of how you can show events through cards"
+      "affiliation": "test org",
+      "eventDate": "11-11-2019",
+      "eventDescription": "This is an example of how you can show events through cards",
+      "eventLocation": "Hawaii",
+      "eventTag": "Clean Energy",
+      "owner": "john@foo.com"
     }
   ]
 
