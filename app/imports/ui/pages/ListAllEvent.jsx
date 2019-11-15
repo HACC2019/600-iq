@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Container, Header, Loader, Card } from 'semantic-ui-react';
-import Event from '/imports/ui/components/Event';
+import EventPublic from '/imports/ui/components/EventPublic';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Events } from '/imports/api/event/Event';
@@ -19,14 +19,18 @@ class ListAllEvent extends React.Component {
   /** Render the page once subscriptions have been received. */
   renderPage() {
     return (
+        <div className="beauty">
         <Container>
           <Header as="h2" textAlign="center" inverted>List Events</Header>
           <Card.Group>
-            {this.props.events.map((event, index) => <Event
+            {this.props.events.map((event, index) => <EventPublic
                 key={index}
                 event={event}/>)}
           </Card.Group>
+          <br/>
+          <br/>
         </Container>
+        </div>
     );
   }
 }
