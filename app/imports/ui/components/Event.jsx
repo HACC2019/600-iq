@@ -8,7 +8,7 @@ import { withRouter, Link } from 'react-router-dom';
 class Event extends React.Component {
   render() {
     return (
-        <Card>
+        <Card fluid>
           <Card.Content>
             <Card.Header>{this.props.event.name} </Card.Header>
             <Card.Meta>

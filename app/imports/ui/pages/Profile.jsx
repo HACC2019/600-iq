@@ -1,10 +1,10 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Container, Header, Loader, Card, Grid, Image, MenuItem } from 'semantic-ui-react';
-import Event from '/imports/ui/components/Event';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Events } from '/imports/api/event/Event';
+import Event from '../components/Event';
 
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
@@ -32,7 +32,7 @@ class Profile extends React.Component {
                   </MenuItem>
                 </Grid.Column>
                 <Grid.Column width={13}>
-                  <Card.Group>
+                  <Card.Group centered>
                     {this.props.events.map((event, index) => <Event
                         key={index}
                         event={event}/>)}
