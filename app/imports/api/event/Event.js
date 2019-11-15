@@ -3,7 +3,7 @@ import SimpleSchema from 'simpl-schema';
 import { Tracker } from 'meteor/tracker';
 
 /** Define a Mongo collection to hold the data. */
-const Event = new Mongo.Collection('Event');
+const Events = new Mongo.Collection('Events');
 
 /** Define a schema to specify the structure of each document in the collection. */
 const EventSchema = new SimpleSchema({
@@ -17,7 +17,7 @@ const EventSchema = new SimpleSchema({
 }, { tracker: Tracker });
 
 /** Attach this schema to the collection. */
-Event.attachSchema(EventSchema);
+Events.attachSchema(EventSchema);
 
 /** Make the collection and schema available to other code. */
-export { Event, EventSchema };
+export { Events, EventSchema };
