@@ -39,10 +39,11 @@ class Signup extends React.Component {
       return <Redirect to={from}/>;
     }
     return (
+        <div className="beauty">
       <Container>
         <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
           <Grid.Column>
-            <Header as="h2" textAlign="center">
+            <Header as="h2" textAlign="center" className="white">
               Register your account
             </Header>
             <Form onSubmit={this.submit}>
@@ -80,9 +81,11 @@ class Signup extends React.Component {
                 content={this.state.error}
               />
             )}
+          <br/>
           </Grid.Column>
         </Grid>
       </Container>
+        </div>
     );
   }
 }

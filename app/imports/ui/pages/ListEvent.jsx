@@ -19,14 +19,18 @@ class ListEvent extends React.Component {
   /** Render the page once subscriptions have been received. */
   renderPage() {
     return (
-        <Container>
-          <Header as="h2" textAlign="center" inverted>List Events</Header>
+        <div className="beauty">
+        <Container >
+          <Header as="h2" textAlign="center" className="less-margin" inverted>List Events</Header>
           <Card.Group>
             {this.props.events.map((event, index) => <Event
                 key={index}
                 event={event}/>)}
           </Card.Group>
+          <br/>
+          <br/>
         </Container>
+        </div>
     );
   }
 }

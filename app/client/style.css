@@ -9,8 +9,16 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.ocean{
+  background-image: url('images/ocean-background.jpeg') ;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .blue {
   color: #52C4D3 !important;
+}
+.white {
+  color: white !important;
 }
 .landing-2{
   background-image: url('images/clouds.jpg');
@@ -20,7 +28,8 @@
 .green-background {
   background-color: #5DAA68;
   color: whitesmoke;
-  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .black-background {
   background-color: black;
@@ -41,6 +50,14 @@ h1, h2 {
 p {
   font-family: 'Josefin Sans' !important;
   font-size:20px;
+}
+.ui.form .field > .selection.dropdown {
+  width: 100%;
+  font-family: 'Josefin Sans' !important;
+}
+.ui.grid > .column:only-child, .ui.grid > .row > .column:only-child {
+  width: 100%;
+  padding-bottom: 15px;
 }
 .heights{
 
@@ -73,4 +90,99 @@ p {
 
 .nav-pad{
   padding-top: 4px;
+}
+.ui.segment:last-child {
+  opacity: 75%;
+}
+.ui.form .field > label {
+  display: block;
+  margin: 0em 0em 0.28571429rem 0em;
+  font-size: 0.92857143em;
+  font-weight: bold;
+  text-transform: none;
+}
+.ui.buttons .button, .ui.buttons .or, .ui.button {
+  font-size: 1rem;
+}
+.pale-yellow {
+  color: #FAF1CF !important;
+}
+.ui.form .fields .field .ui.input input, .ui.form .field .ui.input input {
+  width: auto;
+  font-family: 'Josefin Sans' !important;
+}
+.ui.form .field > .selection.dropdown {
+  width: 100%;
+}
+.ui.form textarea:not([rows]) {
+  height: 12em;
+  min-height: 8em;
+  max-height: 24em;
+  font-family: 'Josefin Sans' !important;
+}
+.less-margin {
+  margin-top: -0.6em !important;
+}
+.ui.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: -0.875em -0.5em;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  opacity: 75%;
+}
+ .ui.cards > .card > .content > .header:not(.ui), .ui.card > .content > .header:not(.ui) {
+   font-weight: bold;
+   font-size: 1.28571429em;
+   margin-top: -0.21425em;
+   line-height: 1.28571429em;
+   font-family: 'Josefin Sans' !important;
+ }
+.ui.cards > .card .meta, .ui.card .meta {
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.4);
+  font-family: 'Josefin Sans' !important;
+}
+.ui.cards > .card > .content > .description, .ui.card > .content > .description {
+  clear: both;
+  color: rgba(0, 0, 0, 0.68);
+  font-family: 'Josefin Sans' !important;
+}
+.ui.cards > .card > .content, .ui.card > .content {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: none;
+  border-top: 1px solid rgba(34, 36, 38, 0.1);
+  background: none;
+  margin: 0em;
+  padding: 1em 1em;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-size: 1em;
+  border-radius: 0em;
+  font-family: 'Josefin Sans' !important;
+}
+.ui.form .field > label {
+  display: block;
+  margin: 0em 0em 0.28571429rem 0em;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.92857143em;
+  font-weight: bold;
+  text-transform: none;
+  font-family: 'Josefin Sans' !important;
+}
+.ui.message {
+  margin-bottom: 0em;
+  opacity: 75%;
+  font-family: 'Josefin Sans' !important;
+}
+.ui.buttons .button, .ui.buttons .or, .ui.button {
+  font-size: 1rem;
+  font-family: 'Josefin Sans' !important;
+}
+.ui.message > :last-child {
+  margin-bottom: 0em;
+  font-family: 'Josefin Sans' !important;
 }

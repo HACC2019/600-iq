@@ -42,10 +42,11 @@ export default class Signin extends React.Component {
     }
     // Otherwise return the Login form.
     return (
+        <div className="beauty">
       <Container>
         <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
           <Grid.Column>
-            <Header as="h2" textAlign="center">
+            <Header as="h2" textAlign="center" className="white">
               Login to your account
             </Header>
             <Form onSubmit={this.submit}>
@@ -83,9 +84,11 @@ export default class Signin extends React.Component {
                 content={this.state.error}
               />
             )}
+            <br/>
           </Grid.Column>
         </Grid>
       </Container>
+        </div>
     );
   }
 }
