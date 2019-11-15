@@ -1,8 +1,9 @@
 {
-  "name": "meteor-application-template-react",
+  "name": "600iq",
   "private": true,
   "dependencies": {
     "@babel/runtime": "^7.7.2",
+    "caniuse-lite": "^1.0.30001010",
     "classnames": "^2.2.6",
     "core-js": "^3.4.1",
     "graphql": "^0.8.2",

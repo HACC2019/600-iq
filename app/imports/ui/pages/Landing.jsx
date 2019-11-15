@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Image } from 'semantic-ui-react';
+import { Grid, Image, Container } from 'semantic-ui-react';
 
 /** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {
@@ -21,7 +21,18 @@ class Landing extends React.Component {
           </div>
           <div className='green-background'>
             <h1 id = 'action' align='center'>How to Use This Platform</h1>
-            <p align='center'>To be completed after events page is completed</p>
+            <Container>
+              <p>
+                This platform is an easy way to showcase your efforts towards our conservation goals as well as to
+                help you connect with other people to increase the collaboration in the community.
+              </p>
+              <p>
+                First, you would need to sign up! It is a very easy process that will take you no more than 5 minutes.
+                Next, you can now add your events! This way you can showcase your efforts to contribute to the
+                conservation goals of your community. Finally, you can see other people&apos;s efforts and you can
+                choose to contribute to their efforts as well!
+              </p>
+            </Container>
           </div>
         </div>
   );
