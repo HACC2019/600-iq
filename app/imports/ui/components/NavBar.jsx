@@ -15,6 +15,11 @@ class NavBar extends React.Component {
         <Menu.Item as={NavLink} activeClassName="" exact to="/">
           <Header inverted as='h1'>Hawaii Green Growth</Header>
         </Menu.Item>
+
+        <Menu.Item as={NavLink} activeClassName="" exact to="/events">
+          <Header inverted as='h1'>Communities&apos; Engagement</Header>
+        </Menu.Item>
+
         {this.props.currentUser ? (
             [<Menu.Item as={NavLink} activeClassName="active" exact to="/profile" key='profile'>
               <Header inverted as='h1'>Profile</Header>
@@ -31,7 +36,7 @@ class NavBar extends React.Component {
               <Header inverted as='h1'>Admin</Header>
             </Menu.Item>
         ) : ''}
-        <Menu.Item position="right">
+            <Menu.Item position="right">
           {this.props.currentUser === '' ? (
             <Dropdown className="amatic" text="LOGIN" pointing="top right" icon={'user'}>
               <Dropdown.Menu>

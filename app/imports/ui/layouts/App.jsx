@@ -15,7 +15,7 @@ import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
-import Event from '../pages/Event';
+import ListAllEvent from '../pages/ListAllEvent';
 import ListEvent from '../pages/ListEvent';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
@@ -32,6 +32,7 @@ class App extends React.Component {
               <Route path="/signup" component={Signup}/>
               {/* eslint-disable-next-line no-undef */}
               <Route path="/show-event" component={ListEvent}/>
+              <Route path="/events" component={ListAllEvent}/>
               <ProtectedRoute path="/challenge" component={ListStuff}/>
               <ProtectedRoute path="/addEvent" component={AddEvent}/>
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
