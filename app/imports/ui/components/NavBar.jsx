@@ -16,13 +16,13 @@ class NavBar extends React.Component {
           <Header inverted as='h1'>Hawaii Green Growth</Header>
         </Menu.Item>
         {this.props.currentUser ? (
-            [<Menu.Item as={NavLink} activeClassName="active" exact to="/profile" key='add'>
+            [<Menu.Item as={NavLink} activeClassName="active" exact to="/profile" key='profile'>
               <Header inverted as='h1'>Profile</Header>
             </Menu.Item>,
-              <Menu.Item as={NavLink} activeClassName="" exact to="/addEvent">
+              <Menu.Item as={NavLink} activeClassName="" exact to="/addEvent" key='add'>
               <Header inverted as='h1' textAlign='center'>Add Events</Header>
             </Menu.Item>,
-              <Menu.Item as={NavLink} activeClassName="" exact to="/show-event">
+              <Menu.Item as={NavLink} activeClassName="" exact to="/show-event" key='event'>
                 <Header inverted as='h1' textAlign='center'>Show Events</Header>
           </Menu.Item>]
         ) : ''}
