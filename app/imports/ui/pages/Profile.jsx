@@ -27,6 +27,7 @@ class Profile extends React.Component {
                 <Grid.Column width={3}>
                   <MenuItem>
                     <Image src='https://react.semantic-ui.com/images/wireframe/image.png' />
+                    <br/>
                     <Header as="h2" textAlign="center" className="less-margin"
                             inverted>Username: {this.props.currentUser}</Header>
                   </MenuItem>
@@ -40,6 +41,7 @@ class Profile extends React.Component {
                 </Grid.Column>
               </Grid.Row>
             </Grid>
+            <br/>
           </Container>
         </div>
     );
