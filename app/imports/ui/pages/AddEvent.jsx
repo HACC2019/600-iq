@@ -57,25 +57,29 @@ class AddEvent extends React.Component {
   render() {
     let fRef = null;
     return (
+        <div className='beauty'>
         <Grid container centered>
           <Grid.Column>
-            <Header as="h2" textAlign="center">Add an Event!</Header>
+            <Header as="h2" textAlign="center" className='pale-yellow'>Add an Event!</Header>
             <AutoForm ref={ref => {
               fRef = ref;
             }} schema={formSchema} onSubmit={data => this.submit(data, fRef)}>
               <Segment>
-                <TextField name='name'/>
-                <SelectField name='affiliation'/>
-                <TextField name='eventDate'/>
-                <TextField name='eventLocation'/>
-                <LongTextField name='eventDescription'/>
-                <SelectField name='eventTag'/>
-                <SubmitField value='Submit'/>
+                <TextField className='josefin' name='name'/>
+                <SelectField className='josefin' name='affiliation'/>
+                <TextField className='josefin' name='eventDate'/>
+                <TextField className='josefin' name='eventLocation'/>
+                <LongTextField className='josefin' name='eventDescription'/>
+                <SelectField className='josefin' name='eventTag'/>
+                <SubmitField className='josefin' value='Submit'/>
                 <ErrorsField/>
               </Segment>
             </AutoForm>
+            <br/>
+            <br/>
           </Grid.Column>
         </Grid>
+        </div>
     );
   }
 }
