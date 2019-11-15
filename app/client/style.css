@@ -164,3 +164,25 @@ p {
   border-radius: 0em;
   font-family: 'Josefin Sans' !important;
 }
+.ui.form .field > label {
+  display: block;
+  margin: 0em 0em 0.28571429rem 0em;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.92857143em;
+  font-weight: bold;
+  text-transform: none;
+  font-family: 'Josefin Sans' !important;
+}
+.ui.message {
+  margin-bottom: 0em;
+  opacity: 75%;
+  font-family: 'Josefin Sans' !important;
+}
+.ui.buttons .button, .ui.buttons .or, .ui.button {
+  font-size: 1rem;
+  font-family: 'Josefin Sans' !important;
+}
+.ui.message > :last-child {
+  margin-bottom: 0em;
+  font-family: 'Josefin Sans' !important;
+}
