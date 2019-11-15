@@ -22,7 +22,7 @@ class ListAllEvent extends React.Component {
         <div className="beauty">
         <Container>
           <Header as="h2" textAlign="center" inverted className="less-margin">List Events</Header>
-          <Card.Group>
+          <Card.Group centered>
             {this.props.events.map((event, index) => <EventPublic
                 key={index}
                 event={event}/>)}

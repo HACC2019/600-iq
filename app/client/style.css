@@ -61,8 +61,11 @@ p {
   padding-bottom: 15px;
 }
 .heights{
-
   height: 600px;
+}
+
+.height{
+  height: 400px;
 }
 
 .community{
@@ -123,6 +126,10 @@ p {
 }
 .less-margin {
   margin-top: -0.6em !important;
+}
+
+.less-margin.signout p{
+  font-size: 32px;
 }
 .ui.cards {
   display: -webkit-box;
