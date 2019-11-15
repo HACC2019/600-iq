@@ -60,7 +60,7 @@ class AddEvent extends React.Component {
         <div className='beauty'>
         <Grid container centered>
           <Grid.Column>
-            <Header as="h2" textAlign="center" className='pale-yellow'>Add an Event!</Header>
+            <Header as="h2" textAlign="center" className='white'>Add an Event!</Header>
             <AutoForm ref={ref => {
               fRef = ref;
             }} schema={formSchema} onSubmit={data => this.submit(data, fRef)}>
