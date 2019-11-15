@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Label } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 
@@ -24,6 +24,9 @@ class Event extends React.Component {
           </Card.Description></Card.Content>
           <Card.Content>
             Tags: <Label color='teal'>{this.props.event.eventTag}</Label>
+          </Card.Content>
+          <Card.Content extra>
+            <Link to={`/edit/${this.props.event._id}`}>Edit</Link>
           </Card.Content>
         </Card>
     );
