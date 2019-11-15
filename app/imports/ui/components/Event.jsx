@@ -1,7 +1,9 @@
 import React from 'react';
-import { Card, Label } from 'semantic-ui-react';
+import { Card, Header, Label, Menu } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
+import { withTracker } from 'meteor/react-meteor-data';
+import { Meteor } from "meteor/meteor";
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 
@@ -25,6 +27,11 @@ class Event extends React.Component {
           <Card.Content>
             Tags: <Label color='teal'>{this.props.event.eventTag}</Label>
           </Card.Content>
+          {Meteor.userId() !== null ? (
+              [<Card.Content key='edit'>
+                <a href={`/Edit/${this.props.user}`}>Edit</a>
+              </Card.Content>]
+          ) : ''}
         </Card>
     );
   }
@@ -34,8 +41,14 @@ class Event extends React.Component {
 // eslint-disable-next-line no-undef
 Event.propTypes = {
   event: PropTypes.object.isRequired,
+  user: PropTypes.string,
 };
+
+/** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
+const EventContainer = withTracker(() => ({
+  user: Meteor.userId(),
+}))(Event);
 
 /** Wrap this component in withRouter since we use the <Link> React Router element. */
 // eslint-disable-next-line no-undef
-export default withRouter(Event);
+export default withRouter(Event, EventContainer);

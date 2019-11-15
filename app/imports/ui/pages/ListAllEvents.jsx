@@ -40,7 +40,7 @@ ListEvent.propTypes = {
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
 export default withTracker(() => {
   // Get access to Stuff documents.
-  const subscription = Meteor.subscribe('Events');
+  const subscription = Meteor.subscribe('AllEvents');
   return {
     events: Events.find({}).fetch(),
     ready: subscription.ready(),

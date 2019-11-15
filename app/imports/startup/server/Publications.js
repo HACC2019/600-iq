@@ -11,6 +11,11 @@ Meteor.publish('Events', function publish() {
   return this.ready();
 });
 
+/** This subscription publishes only the documents associated with the logged in user */
+Meteor.publish('AllEvents', function publish() {
+    return Events.find();
+});
+
 /** This subscription publishes all documents regardless of user, but only if the logged in user is the Admin. */
 Meteor.publish('StuffAdmin', function publish() {
   if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
