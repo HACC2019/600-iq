@@ -23,3 +23,7 @@ Meteor.publish('StuffAdmin', function publish() {
   }
   return this.ready();
 });
+
+Meteor.publish('Users', function publish() {
+  return Meteor.users.find();
+});
