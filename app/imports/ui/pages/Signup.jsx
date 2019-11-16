@@ -21,7 +21,7 @@ class Signup extends React.Component {
     super(props);
     this.state = {
       email: '', password: '', error: '', affiliation: '', firstName: '',
-      lastName: '', redirectToReferer: false
+      lastName: '', redirectToReferer: false,
     };
   }
 
@@ -42,7 +42,9 @@ class Signup extends React.Component {
           if (error) {
             this.setState({ error: 'Affiliation is Required' });
           } else {
-            Roles.addUsersToRoles(Meteor.userId(), affiliation);
+            Meteor.user().role = ['Community'];
+            Roles.addUsersToRoles(Meteor.userId(), ['Community']);
+            Meteor.call('sendVerificationLink');
             this.setState({ error: '', redirectToReferer: true });
           }
         });

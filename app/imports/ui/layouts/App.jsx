@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Meteor } from 'meteor/meteor';
 import 'semantic-ui-css/semantic.css';
 import { Roles } from 'meteor/alanning:roles';
-import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
@@ -16,9 +16,8 @@ import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import ListAllEvent from '../pages/ListAllEvent';
-import ListEvent from '../pages/ListEvent';
 import Profile from '../pages/Profile';
-
+import VerifyEmailPage from '../pages/VerifyEmailPage';
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
   render() {
@@ -32,7 +31,8 @@ class App extends React.Component {
               <Route path="/signin" component={Signin}/>
               <Route path="/signup" component={Signup}/>
               {/* eslint-disable-next-line no-undef */}
-              <ProtectedRoute path="/events" component={ListAllEvent}/>
+              <Route exact path="/verify-email/:token" component={VerifyEmailPage} />
+              <Route path="/events" component={ListAllEvent}/>
               <ProtectedRoute path="/profile" component={Profile}/>
               <ProtectedRoute path="/challenge" component={ListStuff}/>
               <ProtectedRoute path="/addEvent" component={AddEvent}/>

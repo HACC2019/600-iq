@@ -12,6 +12,8 @@ function createUser(email, password, role) {
     email: email,
     password: password,
   });
+  Meteor.call('sendVerificationLink');
+  Meteor.user().roles = role;
   Roles.addUsersToRoles(userID, role);
 }
 

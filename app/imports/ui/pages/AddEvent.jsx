@@ -11,7 +11,6 @@ import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import 'uniforms-bridge-simple-schema-2'; // required for Uniforms
 import SimpleSchema from 'simpl-schema';
-import { Users } from '../../api/user/User';
 
 const goals = ['Clean Energy', 'Local Food', 'Natural Resource Management', 'Waste Reduction',
   'Smart Sustainable Communities', 'Green Workforce & Education'];
