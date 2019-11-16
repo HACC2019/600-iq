@@ -16,6 +16,8 @@ function createUser(email, password, role) {
   Meteor.users.update(userID, { $set: { emails: [{ address: Meteor.users.findOne(userID).username, verified: true }] } });
   if (role === 'admin') {
     Roles.addUsersToRoles(userID, role);
+    // eslint-disable-next-line max-len
+    Meteor.users.update(userID, { $set: { emails: [{ address: Meteor.users.findOne(userID).username, verified: true }] } });
   }
 }
 
