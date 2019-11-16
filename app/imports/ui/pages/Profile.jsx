@@ -36,12 +36,12 @@ class Profile extends React.Component {
                     <Header as="h2" textAlign="center" className="less-margin"
                             inverted>Name: </Header>
                     <Header className="less-margin" textAlign="center"
-                       inverted>{this.props.profile[0].firstName} {this.props.profile[0].lastName} </Header>
+                       inverted>{this.props.users.firstName} {this.props.users.lastName} </Header>
                     <br/>
                     <Header as="h2" textAlign="center" className="less-margin"
                             inverted>Affiliation: </Header>
                     <Header className="less-margin" textAlign="center"
-                       inverted>{this.props.profile[0].affiliation}</Header>
+                       inverted>{this.props.users.affiliation}</Header>
                   </MenuItem>
                 </Grid.Column>
                 <Grid.Column width={13}>
@@ -65,18 +65,18 @@ Profile.propTypes = {
   events: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
   currentUser: PropTypes.string,
-  profile: PropTypes.array,
+  users: PropTypes.array,
 };
 
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
 export default withTracker(() => {
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe('Events');
-  const profiles = Meteor.subscribe('Profiles');
+  const profiles = Meteor.subscribe('Users');
   return {
     events: Events.find({}).fetch(),
     ready: subscription.ready() && profiles.ready(),
     currentUser: Meteor.user() ? Meteor.user().username : '',
-    profile: Users.find({}).fetch(),
+    users: Users.find().fetch,
   };
 })(Profile);

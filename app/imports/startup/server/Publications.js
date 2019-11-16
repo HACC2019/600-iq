@@ -33,3 +33,13 @@ Meteor.publish('ProfilesAdmin', function publish() {
   }
   return this.ready();
 });
+
+Meteor.publish('Users', function publish() {
+  if (this.userId) {
+    const firstName = Meteor.users.findOne(this.userId).profile.firstName;
+    const lastName = Meteor.users.findOne(this.userId).profile.lastName;
+    const affiliation = Meteor.users.findOne(this.userId).profile.affiliation;
+    return Users.find({ firstName: firstName, lastName: lastName, affiliation: affiliation });
+  }
+  return this.ready();
+});
