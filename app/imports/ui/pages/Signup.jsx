@@ -4,6 +4,7 @@ import { Link, Redirect } from 'react-router-dom';
 import { Container, Form, Grid, Header, Message, Segment, Select } from 'semantic-ui-react';
 import { Accounts } from 'meteor/accounts-base';
 import { Meteor } from 'meteor/meteor';
+import { Roles } from 'meteor/alanning:roles';
 import { Users } from '../../api/user/User';
 
 /**
@@ -41,6 +42,7 @@ class Signup extends React.Component {
           if (error) {
             this.setState({ error: 'Affiliation is Required' });
           } else {
+            Roles.addUsersToRoles(Meteor.userId(), affiliation);
             this.setState({ error: '', redirectToReferer: true });
           }
         });
