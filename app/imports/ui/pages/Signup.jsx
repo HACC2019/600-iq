@@ -5,7 +5,6 @@ import { Container, Form, Grid, Header, Message, Segment, Select } from 'semanti
 import { Accounts } from 'meteor/accounts-base';
 import { Meteor } from 'meteor/meteor';
 import { Users } from '../../api/user/User';
-import swal from 'sweetalert';
 
 /**
  * Signup component is similar to signin component, but we create a new user instead.
@@ -36,14 +35,15 @@ class Signup extends React.Component {
     Accounts.createUser({ email, username: email, password }, (err) => {
       if (err) {
         this.setState({ error: err.reason });
-      }
-    });
-    const owner = Meteor.user().username;
-    Users.insert({ firstName, lastName, affiliation, owner }, (error) => {
-      if (error) {
-        this.setState({ error: 'Affiliation is Required' });
       } else {
-        this.setState({ error: '', redirectToReferer: true });
+        const owner = Meteor.user().username;
+        Users.insert({ firstName, lastName, affiliation, owner }, (error) => {
+          if (error) {
+            this.setState({ error: 'Affiliation is Required' });
+          } else {
+            this.setState({ error: '', redirectToReferer: true });
+          }
+        });
       }
     });
   }

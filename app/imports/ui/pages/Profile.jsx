@@ -5,7 +5,7 @@ import Event from '/imports/ui/components/Event';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Events } from '/imports/api/event/Event';
-
+import { Users } from '../../api/user/User';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class Profile extends React.Component {
@@ -30,6 +30,8 @@ class Profile extends React.Component {
                     <br/>
                     <Header as="h2" textAlign="center" className="less-margin"
                             inverted>Username: {this.props.currentUser}</Header>
+                    <Header as="h2" textAlign="center" className="less-margin"
+                            inverted>Name: {this.props.profile.firstName} {this.props.profile.lastName} </Header>
                   </MenuItem>
                 </Grid.Column>
                 <Grid.Column width={13}>
@@ -53,15 +55,18 @@ Profile.propTypes = {
   events: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
   currentUser: PropTypes.string,
+  profile: PropTypes.array,
 };
 
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
 export default withTracker(() => {
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe('Events');
+  const profiles = Meteor.subscribe('Profiles');
   return {
     events: Events.find({}).fetch(),
-    ready: subscription.ready(),
+    ready: subscription.ready() && profiles.ready(),
     currentUser: Meteor.user() ? Meteor.user().username : '',
+    profile: Users.find({}).fetch(),
   };
 })(Profile);

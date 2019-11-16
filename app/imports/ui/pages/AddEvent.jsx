@@ -43,7 +43,6 @@ class AddEvent extends React.Component {
   submit(data, formRef) {
     const { name, affiliation, eventDate, eventDescription, eventLocation, eventTag } = data;
     const owner = Meteor.user().username;
-    Users.insert({ firstName: name, lastName: name, affiliation, owner });
     Events.insert({ name, affiliation, eventDate, eventDescription, eventLocation, eventTag, owner },
         (error) => {
           if (error) {
