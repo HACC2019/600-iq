@@ -29,11 +29,19 @@ class Profile extends React.Component {
                     <Image src='https://react.semantic-ui.com/images/wireframe/image.png' />
                     <br/>
                     <Header as="h2" textAlign="center" className="less-margin"
-                            inverted>Username: {this.props.currentUser}</Header>
+                            inverted>Username: </Header>
+                    <Header className="less-margin" textAlign="center"
+                       inverted>{this.props.currentUser}</Header>
+                    <br/>
                     <Header as="h2" textAlign="center" className="less-margin"
-                            inverted>Name: {this.props.profile[0].firstName} {this.props.profile[0].lastName} </Header>
+                            inverted>Name: </Header>
+                    <Header className="less-margin" textAlign="center"
+                       inverted>{this.props.profile[0].firstName} {this.props.profile[0].lastName} </Header>
+                    <br/>
                     <Header as="h2" textAlign="center" className="less-margin"
-                            inverted>Affiliation: {this.props.profile[0].affiliation}</Header>
+                            inverted>Affiliation: </Header>
+                    <Header className="less-margin" textAlign="center"
+                       inverted>{this.props.profile[0].affiliation}</Header>
                   </MenuItem>
                 </Grid.Column>
                 <Grid.Column width={13}>
