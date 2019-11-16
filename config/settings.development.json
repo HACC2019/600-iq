@@ -15,10 +15,12 @@
   "defaultEvents": [
     {
       "name": "Sample Event",
-      "participant": "Participants go here",
-      "date": "11-11-2019",
-      "image": "images/hawaii-background.jpg",
-      "description": "This is an example of how you can show events through cards"
+      "affiliation": "test org",
+      "eventDate": "11-11-2019",
+      "eventDescription": "This is an example of how you can show events through cards",
+      "eventLocation": "Hawaii",
+      "eventTag": "Clean Energy",
+      "owner": "john@foo.com"
     }
   ]
 
