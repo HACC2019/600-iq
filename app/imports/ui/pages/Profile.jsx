@@ -31,7 +31,9 @@ class Profile extends React.Component {
                     <Header as="h2" textAlign="center" className="less-margin"
                             inverted>Username: {this.props.currentUser}</Header>
                     <Header as="h2" textAlign="center" className="less-margin"
-                            inverted>Name: {this.props.profile.firstName} {this.props.profile.lastName} </Header>
+                            inverted>Name: {this.props.profile[0].firstName} {this.props.profile[0].lastName} </Header>
+                    <Header as="h2" textAlign="center" className="less-margin"
+                            inverted>Affiliation: {this.props.profile[0].affiliation}</Header>
                   </MenuItem>
                 </Grid.Column>
                 <Grid.Column width={13}>
