@@ -1,7 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Stuffs } from '../../api/stuff/Stuff.js';
 import { Events } from '../../api/event/Event';
-
 /* eslint-disable no-console */
 
 /** Initialize the database with a default data document. */

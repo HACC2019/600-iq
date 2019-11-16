@@ -11,6 +11,7 @@ import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import 'uniforms-bridge-simple-schema-2'; // required for Uniforms
 import SimpleSchema from 'simpl-schema';
+import { Users } from '../../api/user/User';
 
 const goals = ['Clean Energy', 'Local Food', 'Natural Resource Management', 'Waste Reduction',
   'Smart Sustainable Communities', 'Green Workforce & Education'];
@@ -42,6 +43,7 @@ class AddEvent extends React.Component {
   submit(data, formRef) {
     const { name, affiliation, eventDate, eventDescription, eventLocation, eventTag } = data;
     const owner = Meteor.user().username;
+    Users.insert({ firstName: name, lastName: name, affiliation, owner });
     Events.insert({ name, affiliation, eventDate, eventDescription, eventLocation, eventTag, owner },
         (error) => {
           if (error) {
