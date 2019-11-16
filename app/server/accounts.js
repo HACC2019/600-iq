@@ -1,5 +1,6 @@
 import { Accounts } from 'meteor/accounts-base';
 import { Meteor } from 'meteor/meteor';
+import { Users } from '../imports/api/user/User';
 
 Accounts.emailTemplates.siteName = 'HGG MalamaHawaii';
 Accounts.emailTemplates.from = 'HGG MalamaHawaii <admin@malama.com>';
@@ -19,3 +20,21 @@ Accounts.emailTemplates.verifyEmail = {
   },
 };
 
+// eslint-disable-next-line no-unused-vars
+export default function createUser(firstName, lastName, affiliation, email, password) {
+  Accounts.createUser({ email, username: email, password }, (err) => {
+    if (err) {
+      this.setState({ error: err.reason });
+    } else {
+      const owner = Meteor.user().username;
+      Users.insert({ firstName, lastName, affiliation, owner }, (error) => {
+        if (error) {
+          this.setState({ error: 'Affiliation is Required' });
+        } else {
+          Meteor.call('sendVerificationLink');
+          this.setState({ error: '', redirectToReferer: true });
+        }
+      });
+    }
+  });
+};

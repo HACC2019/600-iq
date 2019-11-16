@@ -5,8 +5,13 @@ import swal from 'sweetalert';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
 import { Redirect } from 'react-router-dom';
+import { Grid, Header } from 'semantic-ui-react';
 
 class VerifyEmailPage extends React.Component {
+  constructor() {
+    super();
+    this.state = '';
+  }
 
   componentDidMount() {
       const token = this.props.token;
@@ -21,10 +26,27 @@ class VerifyEmailPage extends React.Component {
       });
     }
 
+    update() {
+      if (this.state === '') {
+        this.setState = 'update';
+        this.forceUpdate();
+      }
+    }
+
   render() {
-    const { from } = { from: { pathname: '/' } };
+    // const { from } = { from: { pathname: '/' } };
     return (
-      <Redirect to={from}/>
+        <div className="beauty height">
+          <Grid container centered verticalAlign='middle' className='height'>
+            <Grid.Row>
+              <Grid.Column>
+                <Header as="h2" textAlign="center" className="less-margin signout" inverted>
+                  <p>You are signed out.</p>
+                </Header>
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </div>
     );
   }
 }

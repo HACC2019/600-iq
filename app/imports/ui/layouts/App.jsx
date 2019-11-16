@@ -31,7 +31,7 @@ class App extends React.Component {
               <Route path="/signin" component={Signin}/>
               <Route path="/signup" component={Signup}/>
               {/* eslint-disable-next-line no-undef */}
-              <Route exact path="/verify-email/:token" component={VerifyEmailPage} />
+              <Route path="/verify-email/:token" component={VerifyEmailPage} />
               <Route path="/events" component={ListAllEvent}/>
               <ProtectedRoute path="/profile" component={Profile}/>
               <ProtectedRoute path="/challenge" component={ListStuff}/>

@@ -12,9 +12,11 @@ function createUser(email, password, role) {
     email: email,
     password: password,
   });
-  Meteor.call('sendVerificationLink');
-  Meteor.user().roles = role;
-  Roles.addUsersToRoles(userID, role);
+  // eslint-disable-next-line max-len
+  Meteor.users.update(userID, { $set: { emails: [{ address: Meteor.users.findOne(userID).username, verified: true }] } });
+  if (role === 'admin') {
+    Roles.addUsersToRoles(userID, role);
+  }
 }
 
 /** When running app for first time, pass a settings file to set up a default user account. */

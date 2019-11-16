@@ -42,9 +42,8 @@ class Signup extends React.Component {
           if (error) {
             this.setState({ error: 'Affiliation is Required' });
           } else {
-            Meteor.user().role = ['Community'];
-            Roles.addUsersToRoles(Meteor.userId(), ['Community']);
             Meteor.call('sendVerificationLink');
+            Meteor.logout();
             this.setState({ error: '', redirectToReferer: true });
           }
         });
@@ -54,7 +53,7 @@ class Signup extends React.Component {
 
   /** Display the signup form. Redirect to add page after successful registration and login. */
   render() {
-    const { from } = this.props.location.state || { from: { pathname: '/' } };
+    const { from } = { from: { pathname: '/' } };
     // if correct authentication, redirect to from: page instead of signup screen
     if (this.state.redirectToReferer) {
       return <Redirect to={from}/>;

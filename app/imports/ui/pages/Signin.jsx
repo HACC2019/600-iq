@@ -27,6 +27,9 @@ export default class Signin extends React.Component {
     Meteor.loginWithPassword(email, password, (err) => {
       if (err) {
         this.setState({ error: err.reason });
+      } else if (Meteor.users.findOne({ username: email }).emails[0].verified !== true) {
+        Meteor.logout();
+        this.setState({ error: 'You need to verify your email first', redirectToReferer: false });
       } else {
         this.setState({ error: '', redirectToReferer: true });
       }
